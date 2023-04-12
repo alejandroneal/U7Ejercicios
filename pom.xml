@@ -11,4 +11,5 @@
         <maven.compiler.target>18</maven.compiler.target>
         <exec.mainClass>ejRobots.U7tareas</exec.mainClass>
     </properties>
+    <name>U7Ejercicios</name>
 </project>

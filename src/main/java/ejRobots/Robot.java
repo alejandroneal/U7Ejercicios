@@ -25,5 +25,8 @@ public class Robot {
     public String toString() {
         return "Robot:" + this.id + " - Vida:" + this.vida;
     }
-    
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
 }
