@@ -1,5 +1,5 @@
-Robot:1 - Vida:16
-Robot:2 - Vida:27
-Robot:3 - Vida:4
-Robot:4 - Vida:72
-Robot:5 - Vida:76
+Robot:1 - Vida:17
+Robot:2 - Vida:76
+Robot:3 - Vida:26
+Robot:4 - Vida:19
+Robot:5 - Vida:51

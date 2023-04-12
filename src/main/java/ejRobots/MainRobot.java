@@ -28,7 +28,12 @@ public class MainRobot {
         
         //EXPRESIÓN REGULAR
         //^Robot:(\\d+) - Vida:(100|[0-9][0-9])$
+        
         escribirLista(lista);
+        
+        System.out.println("============================================");
+        
+        leerFichero();
     }
     
     public static void escribirLista(List<Robot> listaRobot){
@@ -43,6 +48,20 @@ public class MainRobot {
                     StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (Exception e) {
             System.out.println("Error creando el fichero");
+        }
+    }
+    
+    // Tiene que leer el fichero y pasarlo a una lista de Robot
+    public static void leerFichero(){
+        List<String> lineas = new ArrayList<>();
+        try {
+            lineas = Files.readAllLines(Paths.get("escribirRobot.txt"),
+                     StandardCharsets.UTF_8);
+        } catch (Exception e) {
+            System.out.println("Error leyendo el fichero");
+        }
+        for (String linea : lineas) {
+            System.out.println(linea);
         }
     }
 }
