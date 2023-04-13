@@ -56,7 +56,7 @@ public class MainRobot {
     public static List<Robot> leerFichero() {
         List<String> lineas = new ArrayList<>();
         //EXPRESIÓN REGULAR
-        String regex = "^(Robot:)(\\d+)( - Vida:)(100|[0-9][0-9])$";
+        String regex = "^Robot:(\\d+) - Vida:(100|[0-9][0-9]|[0-9])$";
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         List<Robot> listaRobot = new ArrayList<>();
         
@@ -72,8 +72,8 @@ public class MainRobot {
 
             while (matcher.find()) {
                 
-                Robot aux = new Robot(Integer.parseInt(matcher.group(2)));
-                aux.setVida(Integer.parseInt(matcher.group(4)));
+                Robot aux = new Robot(Integer.parseInt(matcher.group(1)));
+                aux.setVida(Integer.parseInt(matcher.group(2)));
                 listaRobot.add(aux);
             }
         }
